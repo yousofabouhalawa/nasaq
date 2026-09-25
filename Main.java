@@ -4,7 +4,10 @@ public class Main {
         if (command.equals("start")) {
             System.out.println("Nasaq starting...");
             Article article = new Article("Article Title", "Article body");
-            System.out.println("Article title: " + article.title + "\n" + "Article body: " + article.body + "\n" + "Is published: " + article.published);
+            System.out.println("Article title: " + article.getTitle() + "\n" + "Article body: " + article.getBody() + "\n" + "Is published: " + article.isPublished());
+            System.out.println("Publishing article...");
+            article.publish();
+            System.out.println("Is published: " + article.isPublished());
         } else if (command.equals("status")) {
             System.out.println("Status: healthy");
         } else {
