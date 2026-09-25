@@ -1,5 +1,5 @@
 public class Main {
-    public static void main() {
-        System.out.println("Hello world from Nasaq!");
+    public static void main(String[] args) {
+        System.out.println("Reading arguments: " + args[0]);
     }
 }
