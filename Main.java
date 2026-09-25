@@ -7,18 +7,16 @@ public class Main {
         if (command.equals("start")) {
             System.out.println("Nasaq starting...");
             List<Article> articles = new ArrayList<>();
-            Article article1 = new Article("Article 1 Title", "Article 1 body");
-            Article article2 = new Article("Article 2 Title", "Article 2 body");
-            Article article3 = new Article("Article 3 Title", "Article 3 body");
+            Article article1 = new Article(100,"Article 1 Title", "Article 1 body");
+            Article article2 = new Article(101,"Article 2 Title", "Article 2 body");
+            Article article3 = new Article(102,"Article 3 Title", "Article 3 body");
             articles.add(article1);
             articles.add(article2);
             articles.add(article3);
             System.out.println(articles.size());
 
-            int articleNumber = 1;
             for (Article article : articles) {
-                System.out.println("Article " + articleNumber + " title: " + article.getTitle());
-                articleNumber++;
+                System.out.println("Article " + article.getId() + " title: " + article.getTitle());
             }
         } else if (command.equals("status")) {
             System.out.println("Status: healthy");

@@ -1,15 +1,22 @@
 public class Article {
+    private long id;
     private String title;
     private String body;
     private boolean published;
 
-    Article(String title, String body) {
+    Article(long id, String title, String body) {
+        this.id = id;
         this.title = title;
         this.body = body;
     }
 
     public void publish() {
         this.published = true;
+    }
+
+
+    public long getId() {
+        return id;
     }
 
     public String getTitle() {
