@@ -15,10 +15,11 @@ public class Main {
             articles.add(article3);
             System.out.println(articles.size());
 
-            System.out.println("Article 1 title: " + articles.get(0).getTitle());
-            System.out.println("Article 2 title: " + articles.get(1).getTitle());
-            System.out.println("Article 3 title: " + articles.get(2).getTitle());
-            
+            int articleNumber = 1;
+            for (Article article : articles) {
+                System.out.println("Article " + articleNumber + " title: " + article.getTitle());
+                articleNumber++;
+            }
         } else if (command.equals("status")) {
             System.out.println("Status: healthy");
         } else {
