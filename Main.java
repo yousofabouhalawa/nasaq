@@ -3,6 +3,8 @@ public class Main {
     static void executeCommand(String command) {
         if (command.equals("start")) {
             System.out.println("Nasaq starting...");
+            Article article = new Article("Article Title", "Article body");
+            System.out.println("Article title: " + article.title + "\n" + "Article body: " + article.body + "\n" + "Is published: " + article.published);
         } else if (command.equals("status")) {
             System.out.println("Status: healthy");
         } else {
